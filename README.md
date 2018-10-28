@@ -46,23 +46,24 @@ ReButton runs with 2x AAA Alkarine battery.
 
 # Quickstarts
 
-## 1. Access to ReButton
+## 1. Getting access to ReButton
 
-Use AP Mode (Access Point Mode) to configure ReButton.
+Use AP Mode (Access Point Mode) to configure ReButton. **To avoid battery drain, ReButton will automatically shutdown in 10 minutes, at AP mode.** So that we recommend you to setup IoT Hub or IoT Central, first.
 
 1. Hold button until RGB LED turns into White.  
-  RGB LED will start with Blue, Yellow, Cyan, then White.  
-  This will take about 10 seconds.
+  RGB LED will start with Blue, Yellow, Cyan, then White. This will take about 10 seconds.
 
 1. Release button and confirm ReButton is in AP mode.  
   When ReButton successfully boots into AP Mode, RGB LED will blink in White.
 
 1. Connect to AP  
   Look for Wi-Fi Access Point `AZB-xxxxxxxxxxxx` and connect to it from your PC.  
-  `xxxxxxxxxxxx` is MAC address of your ReButton Wi-Fi.  
+  (`xxxxxxxxxxxx` is MAC address of your ReButton Wi-Fi.)  
+
   ![4](img/4.png)
 
 1. Use a Web Browser to access ReButton - Home at `http://192.168.0.1`.  
+
   ![5](img/5.png)
 
 ## 2. Wi-Fi Configuration
@@ -70,32 +71,27 @@ Use AP Mode (Access Point Mode) to configure ReButton.
 Configure Wi-Fi settings to connect to Internet.
 
 1. Click `Wi-Fi` at ReButton - Home.
+
+  ![6](img/6.png)
+
 1. Select your Wi-Fi Access Point from `Wi-Fi SSID` list.  
   If you do not see your Access Point, refresh browser.
 1. Enter `Wi-Fi Passphrase` for your Wi-Fi AP.
 1. In case you would like to use specific Internet Time Server, enter FQDN to `Time Server`.  
-  Default Internet Time Server is pool.ntp.org -> cn.pool.ntp.org -> europe.pool.ntp.org -> asia.pool.ntp.org -> oceania.pool.ntp.org .
+  _Default Internet Time Server is pool.ntp.org -> cn.pool.ntp.org -> europe.pool.ntp.org -> asia.pool.ntp.org -> oceania.pool.ntp.org ._
 
 1. Click `Save`.
 
-![6](img/6.png)
 
 ## 3. Cloud Configuration
+
 ### 3-1. Azure IoT Hub
+
+**NOTE: Skip to next section if you would like to connct to Azure IoT Central.**
 
 In order to send Device to Cloud (D2C) message to Azure IoT Hub, save Connection String in ReButton.
 
-```
-NOTE:
-Skip to next section if you would like to send D2C message to Azure IoT Central.
-```
-
-1. Create IoT Device in Azure IoT Hub.  
-  ![16](img/16.png)  
-  ![17](img/17.png)
-
-1. Copy `Connection string` for your ReButton.  
-  ![13](img/13.png)
+**To get the connection string, [This](IoT_Hub.md) page could be helpful.**
 
 1. Browse to ReButton - Home page then click `Azure IoT Hub`.
 1. Paste Connection String to `Azure IoT Hub connection string`.
@@ -105,10 +101,11 @@ Skip to next section if you would like to send D2C message to Azure IoT Central.
 
 ### 3-2. Azure IoT Central
 
+**NOTE: Skip this section if you already configured IoT Hub at section 3-1.**
+
 In order to send Device to Cloud (D2C) message to Azure IoT Central, save device provisioning information in ReButton.
 
-In order to connect ReButton to Azure IoT Central, the device template for ReButton needs to be defined in you Azure IoT Central Application.  
-Please refer [Azure IoT Central Document](https://docs.microsoft.com/en-us/azure/iot-central/howto-set-up-template) for more information.
+In order to connect ReButton to Azure IoT Central, the device template for ReButton needs to be defined in you Azure IoT Central Application. _Please refer [Azure IoT Central Document](https://docs.microsoft.com/en-us/azure/iot-central/howto-set-up-template) for more information._
 
 1. Create a device template for ReButton in Azure IoT Central.  
 
@@ -149,7 +146,8 @@ Exit AP Mode and power off ReButton.
 
 1. Click `Shutdown` button.
 
-## 5. Device To Cloud (D2C) Messsage
+# Other informations
+## Device To Cloud (D2C) Messsage
 
 Button push will trigger D2C message to the cloud.  
 ReButton supports 5 types of button triggers and default D2C message strings are following.
@@ -195,20 +193,18 @@ Examples of D2C message:
 }
 ```
 
-# Tips
-
 ## Firmware OTA Update
 
 ReButton supports Firmware OTA.  
 Browse to `Firmware Update` page to see the current vesrion of firmware and update to new firmware.
 
-### Current Firmware Version
+#### Current Firmware Version
 
 Browse to ReButton - Home then click `Firmware Update` to see current firmware version of ReButton.
 
 ![15](img/15.png)
 
-### Firmware Update
+#### How to update firmware through OTA
 
 ReButton Firmware can be updated from firmware image saved in cloud (or any location ReButton can access).
 
@@ -223,7 +219,7 @@ ReButton Firmware can be updated from firmware image saved in cloud (or any loca
 1. Release button when RGB LED blinks.
 1. Enter AP Mode, browse to ReButton - Home page then click `Firmware Update`. So, you can verify current Firmware version.
 
-## SWD
+## SWD (Serial Wire Debug)
 
 ReButton has SWD pads for MCU development. **Please do this on your own risk,**  it is easy to make your ReButton brick.  
 Following picture show the SWD signals of the PAD. You can connect this PADs to debug adapters by using [TC2030-CTX 6-Pin Cable](http://www.tag-connect.com/TC2030-CTX) or solder directly to the PADs.
@@ -251,7 +247,7 @@ openocd -f /usr/local/share/openocd/scripts/interface/cmsis-dap.cfg -c 'transpor
 |Extension|1x I2C Grove connector (3.3V I/O)|
 |Extras|1x Jumper switch|
 ||1x SWD pads|
-||1x UART for debuging|
+||1x UART for debugging|
 |Power supply|2x AAA Alkarine batteries (LR03)|
 |Internal supply voltage|3.3V|
 |Dimension|70mm\*70mm\*25mm|
@@ -261,7 +257,7 @@ openocd -f /usr/local/share/openocd/scripts/interface/cmsis-dap.cfg -c 'transpor
 * [Housing](https://github.com/SeeedJP/ReButton/tree/master/mechanicals)  
 
 ![CC-BY-SA](https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png)  
-These filess are licensed under [CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/deed.en).
+These files are licensed under [CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/deed.en).
 
 ## Software Development
 
