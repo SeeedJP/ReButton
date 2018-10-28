@@ -52,3 +52,33 @@ Added. To grab the `Connection string`, click the device ID.
 You can see keys and connection strings. You will use `Connection string (primary key)`, so click the copy button for that.
 
 
+# To confirm ReButton works with IoT HUB
+
+I used [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/) to receive messages sent to IoT HUB from ReButton. You can find install manual on [here](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli).
+
+After getting Azure CLI installed, please login.  
+```
+$ az login
+```  
+So your default web browser will be launched and let you sign in.
+
+And then, install [Azure IoT extension for Azure CLI](https://github.com/Azure/azure-iot-cli-extension) by doing like this.
+```
+$ az extension add --name azure-cli-iot-ext
+```  
+
+Let's try to list IoT Hub.  
+```
+$ az iot hub list
+```  
+
+
+Too see help,  
+```
+$ az iot hub monitor-events --help
+```  
+
+To monitor messages from `ReButton` to IoT Hub, please do like this.  
+```
+$ az iot hub monitor-events -n [IoTHub Name] --properties anno sys --timeout 0
+```
