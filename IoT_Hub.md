@@ -40,7 +40,7 @@ If you don't have an active Azure subscription, create a [free account](https://
 
 Click `Size and scale`, then select `F1 : Free tier`.  
 
-_NOTE: Only one `F1 : Free tier` is available per subscription. If F1 is already used, select `S1 : Standard tier`( not free of charge ). More about [IoT Hub tier](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-scaling)._
+_NOTE: Only one F1 Free tier is available per subscription. If you already have F1 IoT Hub, you may need non-free tier IoT Hub. More about [IoT Hub tier](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-scaling)._
 
 ### 2.6 : Click `Review + create` button
 
