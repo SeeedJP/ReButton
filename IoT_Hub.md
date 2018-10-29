@@ -8,8 +8,14 @@ This page was provided just to provide a convenience for users. Seeed is not res
 You can learn about "Azure IoT Hub" at [here](https://docs.microsoft.com/en-us/azure/iot-hub/about-iot-hub), and pricing could be found [here](https://azure.microsoft.com/en-us/pricing/details/iot-hub/).
 
   ![](img/just_login.png)
-
+  
 When you just get sign in to Azure portal, you will see the dashboard. To find "IoT Hub", click "All services".
+
+  ![](img/search_iot.png)
+
+By searching "IoT", you can find IoT Hub easily. Choose "IoT Hub".  
+_If you click a star, you can put IoT Hub to your favorite Azure service. Then you can find IoT Hub at the pain on the left._
+
 
   ![](img/no_hub.png)
 
