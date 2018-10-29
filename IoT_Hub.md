@@ -40,10 +40,7 @@ If you don't have an active Azure subscription, create a [free account](https://
 
 Click `Size and scale`, then select `F1 : Free tier`.  
 
-> [!NOTE]  
-> Only one `F1 : Free tier` is available per subscription.  
-> If F1 is already used, select `S1 : Standard tier`.  
-> More about [IoT Hub tier](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-scaling) 
+_NOTE: Only one `F1 : Free tier` is available per subscription. If F1 is already used, select `S1 : Standard tier`( not free of charge ). More about [IoT Hub tier](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-scaling)._
 
 ### 2.6 : Click `Review + create` button
 
@@ -140,8 +137,8 @@ $ az iot hub list
 ### 5.5 : Monitor Device to Cloud (D2C) message
 
 To monitor messages from `ReButton` to IoT Hub, please run command.  
-> [!NOTE]  
-> Replace [IoTHub Name] with your Azure IoT Hub instance from list command above.
+
+_NOTE: Replace [IoTHub Name] with your Azure IoT Hub instance from list command above._
 
 ```
 $ az iot hub monitor-events -n [IoTHub Name] --properties anno sys --timeout 0
