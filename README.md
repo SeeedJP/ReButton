@@ -219,6 +219,22 @@ ReButton Firmware can be updated from firmware image saved in cloud (or any loca
 1. Release button when RGB LED blinks.
 1. Enter AP Mode, browse to ReButton - Home page then click `Firmware Update`. So, you can verify current Firmware version.
 
+CRC can calclulate with [generatecrc](https://github.com/SeeedJP/ReButton/tree/master/tools/generatecrc) command.
+
+example:
+```
+$ cd generatecrc
+$ ./generatecrc ../ReButtonApp.1.0.bin
+========== ReButton Firmware Information ==========
+
+Package path: ../ReButtonApp.1.0.bin
+Package CRC: 0xbc3b
+Package size: 641924
+
+===================================================
+```
+
+# For firmware developers
 ## SWD (Serial Wire Debug)
 
 ReButton has SWD pads for MCU development. **Please do this on your own risk,**  it is easy to make your ReButton brick.  
@@ -226,7 +242,7 @@ Following picture show the SWD signals of the PAD. You can connect this PADs to 
 
 ![SWD PADs](img/SWD_PAD.png)
 
-We are preparing for providing software development informations and affordable debug adapter. For your recovering purpose, you can download ReButton default firmware binary from [here](https://github.com/SeeedJP/ReButton/tree/master/firmware). You need to flash this binary for target `STM32F412RG` and flash address `0x0800 0000`.
+We are preparing for providing software development informations and affordable debug adapter. For your recovering purpose, you can download ReButton default firmware binary from [here](https://github.com/SeeedJP/ReButton/tree/master/firmware). You need to flash this binary for target `STM32F412RG` and flash address `0x0800 0000` since this default firmware binary includes bootloader. ( When you flash a binary without bootloader, you should flash address `0x0800 C000`. )
 
 example:
 ```
