@@ -234,7 +234,24 @@ Package size: 641924
 ===================================================
 ```
 
-# For firmware developers
+# Firmware Development
+## Development environment
+Please download and install [Arduino IDE](https://www.arduino.cc/en/Main/Software), not web editor. 
+
+On the preferenceof Arduino IDE, enter `https://www.seeed.co.jp/package_SeeedJP_ReButton_index.json` to "Additional Boards Manager URLs".
+
+![ide_preference](img/ide_preference.png)
+
+Then goes to the Boards Managet from Tools > Board. And search ReButton board package by entering "rebutton". Then choose the candidate and click the "install" button.
+
+![boards_manager](img/boards_manager.png)
+
+After the install process ( it may take a few minutes ) you can choose "ReButton" through Tool -> Board on Arduino IDE.
+
+## Firmware sample code
+The source code is:
+* [ReButton App](https://github.com/SeeedJP/ReButtonApp)
+
 ## SWD (Serial Wire Debug)
 
 ReButton has SWD pads for MCU development. **Please do this on your own risk,**  it is easy to make your ReButton brick.  
@@ -275,10 +292,3 @@ openocd -f /usr/local/share/openocd/scripts/interface/cmsis-dap.cfg -c 'transpor
 ![CC-BY-SA](https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png)  
 These files are licensed under [CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/deed.en).
 
-## Software Development
-
-|Description|Value|
-|:--|:--|
-|IDE|Arduino IDE|
-||Visual Studio Code|
-|Programming language|C / C++|
