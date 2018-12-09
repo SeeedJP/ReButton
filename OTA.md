@@ -4,13 +4,15 @@ You can upload ReButton firmware binary to Azure Storage wiith [Azure CLI](https
 
 ### 1.1 : Install Azure CLI
 
-Please refer to Azure CLI install instruction [here](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli)
+Please refer to Azure CLI install instruction [here](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli).
+
+And [Using the Azure CLI with Azure Storage](https://docs.microsoft.com/en-us/azure/storage/common/storage-azure-cli) page is helpful to process things on this instruction.
 
 ### 1.2 : Create a new storage account
 
 To use Azure Storage, you need a storage account. You can create a new Azure Storage account after you've configured your computer to connect to your subscription.
 
-```
+```bash
 az storage account create \
     --location <location> \
     --name <account_name> \
@@ -18,28 +20,30 @@ az storage account create \
     --sku <account_sku>
 ```
 e.g.
-```
-az storage account create --location japaneast --name seeedkk --resource-group ReButton --sku Standard_GRS
+```bash
+az storage account create --location japaneast \
+--name seeedkk --resource-group ReButton --sku Standard_GRS
 ```
 You can use same resource group to IoT Hub.
 
 ### 1.3: Set default Azure storage account
 
 First, display your storage account keys by using following account.
-```
+```bash
 az storage account keys list \
     --account-name <account_name> \
     --resource-group <resource_group> \
     --output table
 ```
 e.g.
-```
-az storage account keys list --account-name seeedkk --resource-group ReButton
+```bash
+az storage account keys list --account-name seeedkk \
+--resource-group ReButton
 ```
 
 Now that you have the key, you can define it and the account name as environment variables:
 
-```
+```bash
 export AZURE_STORAGE_ACCOUNT=<account_name>
 export AZURE_STORAGE_KEY=<key>
 ```
@@ -47,22 +51,24 @@ export AZURE_STORAGE_KEY=<key>
 ### 1.4 Create a container
 
 Every blob in Azure storage must be in a container. You can create a container by using following command.
-```
-az storage container create --name <container_name> --public-access container
+```bash
+az storage container create --name <container_name> \
+--public-access container
 ```
 
 ### 1.5 Upload a blob to a container
 
 And you can upload firmware binary to Azure storage with following command.
-```
+```bash
 az storage blob upload \
     --file <local_file_path> \
     --container-name <container_name> \
     --name <blob_name>
 ```
 e.g.
-```
-az storage blob upload -f ReButtonApp.1.0.bin --container-name rebuttonfirm --name ReButtonApp.1.0.bin
+```bash
+az storage blob upload -f ReButtonApp.1.0.bin \
+--container-name rebuttonfirm --name ReButtonApp.1.0.bin
 ```
 
 ### 1.6: Grab the URL
@@ -80,7 +86,7 @@ In the container you have just used, you can find uploaded file(blob). By clicki
 CRC can calclulate with [generatecrc](https://github.com/SeeedJP/ReButton/tree/master/tools/generatecrc) command we are providing in this repository.
 
 example:
-```
+```bash
 $ cd generatecrc
 $ ./generatecrc ../ReButtonApp.1.0.bin
 ========== ReButton Firmware Information ==========
@@ -95,6 +101,7 @@ Package size: 641924
 ## Step 3: OTA process
 
 1. Enter ReButton to AP mode by press hold the button until RGB LED turns into White. 
+   (reminder: connect to the AP `AZB-xxxxxxxxxxxx` and the URL of the page is `http://192.168.0.1`)
 1. Browse to ReButton - Home page then click `Firmware Update`.
 1. Enter following information.
   - `Package URI` - got on Step 1.6
