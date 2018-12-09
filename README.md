@@ -193,47 +193,6 @@ Examples of D2C message:
 }
 ```
 
-## Firmware OTA Update
-
-ReButton supports Firmware OTA.  
-Browse to `Firmware Update` page to see the current vesrion of firmware and update to new firmware.
-
-#### Current Firmware Version
-
-Browse to ReButton - Home then click `Firmware Update` to see current firmware version of ReButton.
-
-![15](img/15.png)
-
-#### How to update firmware through OTA
-
-ReButton Firmware can be updated from firmware image saved in cloud (or any location ReButton can access).
-
-1. Enter AP mode.
-1. Browse to ReButton - Home page then click `Firmware Update`.
-1. Enter following information.
-  - `Package URI`
-  - `Package CRC`
-  - `Package Size`
-1. While holding Button, click `Update`.
-1. Hold button until RGB LED starts blinking. ReButton is downloading the firmware image, checking CRC, and flashing new image. **This will take about 30 seconds.**
-1. Release button when RGB LED blinks.
-1. Enter AP Mode, browse to ReButton - Home page then click `Firmware Update`. So, you can verify current Firmware version.
-
-CRC can calclulate with [generatecrc](https://github.com/SeeedJP/ReButton/tree/master/tools/generatecrc) command.
-
-example:
-```
-$ cd generatecrc
-$ ./generatecrc ../ReButtonApp.1.0.bin
-========== ReButton Firmware Information ==========
-
-Package path: ../ReButtonApp.1.0.bin
-Package CRC: 0xbc3b
-Package size: 641924
-
-===================================================
-```
-
 # Firmware Development
 ## Development environment
 Please download and install [Arduino IDE](https://www.arduino.cc/en/Main/Software), not web editor. 
@@ -251,6 +210,18 @@ After the install process ( it may take a few minutes ) you can choose "ReButton
 ## Firmware sample code
 The source code is:
 * [ReButton App](https://github.com/SeeedJP/ReButtonApp)
+
+## Firmware OTA Update
+ReButton supports Firmware OTA.  
+Browse to `Firmware Update` page to see the current vesrion of firmware and update to new firmware.
+
+#### Current Firmware Version
+Browse to ReButton - Home then click `Firmware Update` to see current firmware version of ReButton.
+
+![15](img/15.png)
+
+#### How to update firmware through OTA
+For OTA firmware update process, please refer [this](OTA.md) page.
 
 ## SWD (Serial Wire Debug)
 
