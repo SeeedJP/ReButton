@@ -1,5 +1,7 @@
 ![1](img/1.png)
 
+[HoL document in Chinese](IoTinAction_Hands-on Lab_ReButton OTA CN.pdf)
+
 # Overview
 
 **Build IoT solutions with IoT Button!**
