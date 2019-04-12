@@ -1,6 +1,8 @@
 ![1](img/1.png)
 
-[HoL document in Chinese](IoTinAction_Hands-on Lab_ReButton OTA CN.pdf)
+ReButton is now available at [Seeed Bazaar](https://www.seeedstudio.com/ReButton-p-2930.html).
+
+[HoL document in Simplified Chinese](https://seeedjp.github.io/ReButton/IoTinAction_Hands-on%20Lab_ReButton%20OTA%20CN.pdf)
 
 # Overview
 
