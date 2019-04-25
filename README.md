@@ -201,7 +201,7 @@ Examples of D2C message:
 ## Development environment
 Please download and install [Arduino IDE](https://www.arduino.cc/en/Main/Software), not web editor. 
 
-On the preferenceof Arduino IDE, enter `https://www.seeed.co.jp/package_SeeedJP_ReButton_index.json` to "Additional Boards Manager URLs".
+On the preferenceof Arduino IDE, enter `https://www.seeed.co.jp/package_SeeedJP_index.json` to "Additional Boards Manager URLs".
 
 ![ide_preference](img/ide_preference.png)
 
