@@ -22,7 +22,7 @@ IoT Hubの料金階層については[IoT Hub pricing](https://azure.microsoft.c
 ![](img/ja/Portal1.png)
 
 ### 2.3 : `モノのインターネット(IoT)`から`IoT Hub`を選びます。
-  
+
 ![](img/ja/Portal2.png)
 
 ### 2.4 : 必要事項を埋める
@@ -114,7 +114,7 @@ Azure CLIのインストール方法は[こちら](https://docs.microsoft.com/ja
 次のコマンドを使って、[Azure IoT extension for Azure CLI](https://github.com/Azure/azure-iot-cli-extension)をインストールします。
 ```
 $ az extension add --name azure-cli-iot-ext
-```  
+```
 
 ### 5.3 : Azureにログインする
 
@@ -122,7 +122,7 @@ Azure CLIがインストールできたら、次のコマンドを使ってAzure
 
 ```
 $ az login
-```  
+```
 
 Webブラウザー上でログインプロセスを完了させます。
 
@@ -132,13 +132,13 @@ Azure IoT Hubの一覧を表示します。
 
 ```
 $ az iot hub list
-``` 
+```
 
 ### 5.5 : Device to Cloud (D2C)メッセージをモニターする
 
 RebuttonからIoT Hubに送信されるメッセージを監視するために、次のコマンドを実行します。 
 
-_注: listコマンドを使い、Azure IoT Hubのインスタンス名を[IoTHub Name]置き換えます。_
+_参考: [IoTHub Name]は、Step 5.4のリストコマンドで得たAzure IoT Hubインスタンスに置き換えます。_
 
 ```
 $ az iot hub monitor-events -n [IoTHub Name] --properties anno sys --timeout 0
@@ -148,4 +148,4 @@ Azure CLIコマンドの詳細については、helpコマンドからご確認�
 
 ```
 $ az iot hub monitor-events --help
-```  
+```

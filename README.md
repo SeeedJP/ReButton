@@ -2,6 +2,8 @@
 
 ReButton is now available at [Seeed Bazaar](https://www.seeedstudio.com/ReButton-p-2930.html).
 
+[日本語版ドキュメント](https://seeedjp.github.io/ReButton/README-ja)
+
 [HoL document in Simplified Chinese](https://seeedjp.github.io/ReButton/IoTinAction_Hands-on%20Lab_ReButton%20OTA%20CN.pdf)
 
 # Overview
@@ -46,13 +48,15 @@ You can update ReButton firmware over-the-air.
 
 ## Low Energy Design
 
-ReButton runs with 2x AAA Alkarine battery.
+ReButton runs with 2x AAA Alkaline battery.
 
 # Quickstarts
 
 ## 1. Getting access to ReButton
 
-Use AP Mode (Access Point Mode) to configure ReButton. **To avoid battery drain, ReButton will automatically shutdown in 10 minutes, at AP mode.** So that we recommend you to setup IoT Hub or IoT Central, first.
+Use AP Mode (Access Point Mode) to configure ReButton. **To avoid battery drain, ReButton will automatically shutdown in 10 minutes, at AP mode. So that we recommend you to setup IoT Hub or IoT Central, first.**
+
+**AP Mode consume power. Please use fresh battery to start using ReButton.**
 
 1. Hold button until RGB LED turns into White.  
   RGB LED will start with Blue, Yellow, Cyan, then White. This will take about 10 seconds.
@@ -205,7 +209,7 @@ On the preferenceof Arduino IDE, enter `https://www.seeed.co.jp/package_SeeedJP_
 
 ![ide_preference](img/ide_preference.png)
 
-Then goes to the Boards Managet from Tools > Board. And search ReButton board package by entering "rebutton". Then choose the candidate and click the "install" button.
+Then goes to the Boards Manager from Tools > Board. And search ReButton board package by entering "rebutton". Then choose the candidate and click the "install" button.
 
 ![boards_manager](img/boards_manager.png)
 
@@ -256,7 +260,7 @@ openocd -f /usr/local/share/openocd/scripts/interface/cmsis-dap.cfg -c 'transpor
 |Extras|1x Jumper switch|
 ||1x SWD pads|
 ||1x UART for debugging|
-|Power supply|2x AAA Alkarine batteries (LR03)|
+|Power supply|2x AAA Alkaline batteries (LR03)|
 |Internal supply voltage|3.3V|
 |Dimension|70mm\*70mm\*25mm|
 

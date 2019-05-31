@@ -1,8 +1,8 @@
 ![1](img/1.png)
 
-ReButtonは[Seeed Bazaar](https://www.seeedstudio.com/ReButton-p-2930.html)から購入できます。
+[This document in English.](https://seeedjp.github.io/ReButton/)
 
-[ハンズオンラボ用資料(簡体字)](https://seeedjp.github.io/ReButton/IoTinAction_Hands-on%20Lab_ReButton%20OTA%20CN.pdf)
+ReButtonは[Seeed Bazaar](https://www.seeedstudio.com/ReButton-p-2930.html)から購入できます。
 
 # 概要
 
@@ -25,8 +25,8 @@ Seeed Groveをつなぐことで、データポイントを増やすこともで
 * シングルクリック
 * ダブルクリック
 * トリプルクリック
-* ロングクリック(>3秒)
-* スーパーロングクリック (>6秒)
+* ロングクリック(>3秒)
+* スーパーロングクリック (>6秒)
 
 ## Seeed Groveセンサーサポート
 
@@ -52,8 +52,10 @@ ReButtonは単4アルカリ電池2本で動作します。
 
 ## 1. ReButtonへのアクセス
 
-ReButtonを設定するために、アクセスポイント(AP)モードで起動します。**ReButtonはバッテリーの無駄な消費を避けるために、APモードの起動から10分経つと、自動でシャットダウンします。** そのため、最初にIoT HubまたはIoT Centralを設定することを推奨します。
- 
+ReButtonを設定するために、アクセスポイント(AP)モードで起動します。**ReButtonはバッテリーの無駄な消費を避けるために、APモードの起動から10分経つと、自動でシャットダウンします。 そのため、先にIoT HubまたはIoT Centralの設定を済ませておくことを推奨します。**
+
+**APモードは多くの電力を消費します。新しい電池を使ってReButtonの設定を行ってください。**
+
 1. LEDが白く光るまでボタンを押し続けます。
   RGB LEDは青→黄→水色→白と順に変化します。白になるまで約10秒かかります。
 
@@ -91,7 +93,7 @@ APモードへのブートが成功すると、LEDは白く点滅します。
 
 ### 3-1. Azure IoT Hub
 
-**※ ※　Azure IoT Centralに接続する場合は、この手順を飛ばしてください。**
+**※ Azure IoT Centralに接続する場合は、この手順を飛ばしてください。**
 
 Device-to-Cloud(D2C)メッセージをAzure IoT Hubに送るために、ReButtonにConnection String(接続文字列)を保存します。
 
@@ -161,8 +163,8 @@ ReButton supportsは5種類のトリガーをサポートしており、既定�
 |シングルクリック|ブルー|1|"Single click"|
 |ダブルクリック|ライム|2|"Double click"|
 |トリプルクリック|マゼンタ|3|"Triple click"|
-|ロングクリック(> 3秒)|イエロー|10|"Long press"|
-|スーパーロングクリック(> 6秒)|シアン|11|"Super long press"|
+|ロングクリック(> 3秒)|イエロー|10|"Long press"|
+|スーパーロングクリック(> 6秒)|シアン|11|"Super long press"|
 
 D2Cメッセージの例:
 ```json
@@ -229,12 +231,12 @@ OTAでファームウェアをアップデートする方法は、[こちら](OT
 
 ## SWD (Serial Wire Debug)
 
-ReButtonはMCUの開発用に、底面にSWDパッドを搭載しています。 **開発にはリスクが伴いますが、** 手軽に自分だけのReButtonをつくることができます。
+ReButtonはMCUの開発用に、底面にSWDパッドを搭載しています。 **開発にはリスクが伴い、** ReButtonを置物にしてしまう危険もあります。
 下図にパッドとSWD信号の対応を示します。 [TC2030-CTX 6ピンケーブル](http://www.tag-connect.com/TC2030-CTX)を使ってパッドとデバッグアダプターを接続するか、直接はんだ付けをしてください。
 
 ![SWD PADs](img/SWD_PAD.png)
 
-私たちはソフトウェア開発のためにの情報と、手軽な価格のデバッグアダプターを用意しています。リカバリーに使える、デフォルトのファームウェアバイナリは[こちら](https://github.com/SeeedJP/ReButton/tree/master/firmware)からダウンロードできます。 バイナリファイルのターゲットは`STM32F412RG`です。デフォルトのファームウェアにはブートローダが含まれているため、書き込み先のアドレスは`0x0800 0000`です。(ブートローダー以外からバイナリを書き込む際のアドレスは`0x0800 C000`)
+私たちはソフトウェア開発のために必要な情報と、手軽な価格のデバッグアダプターを準備を進めています。復旧に使える、デフォルトのファームウェアバイナリは[こちら](https://github.com/SeeedJP/ReButton/tree/master/firmware)からダウンロードできます。 バイナリファイルのターゲットは`STM32F412RG`です。デフォルトのファームウェアにはブートローダが含まれているため、書き込み先のアドレスは`0x0800 0000`です。(ブートローダー以外からバイナリを書き込む際のアドレスは`0x0800 C000`です。)
 
 例:
 ```
@@ -247,10 +249,10 @@ openocd -f /usr/local/share/openocd/scripts/interface/cmsis-dap.cfg -c 'transpor
 
 ![2](img/2.png)
 
-|仕様|バリュー|
+|仕様||
 |:--|:--|
 |MCU module|MXCHIP EMW3166|
-|インプット|プッシュボタンx1|
+|入力|押しボタンx1|
 |アウトプット|RGB LEDx1|
 |拡張ポート|I2C Groveコネクタ (3.3V I/O)x1|
 |Extras|ジャンパースイッチ x1|
@@ -265,5 +267,5 @@ openocd -f /usr/local/share/openocd/scripts/interface/cmsis-dap.cfg -c 'transpor
 * [筐体](https://github.com/SeeedJP/ReButton/tree/master/mechanicals)  
 
 ![CC-BY-SA](https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png)  
-これらのファイルは [CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/deed.en)ライセンスで保護されています。
+これらのファイルは [CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/deed.en)でライセンスされています。
 

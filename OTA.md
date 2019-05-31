@@ -100,6 +100,8 @@ Package size: 641924
 
 ## Step 3: OTA process
 
+**OTA consume power. Please use fresh battery, not to interrupt OTA process.**
+
 1. Enter ReButton to AP mode by press hold the button until RGB LED turns into White. 
    (reminder: connect to the AP `AZB-xxxxxxxxxxxx` and the URL of the page is `http://192.168.0.1`)
 1. Browse to ReButton - Home page then click `Firmware Update`.

@@ -39,7 +39,7 @@ az storage account keys list \
 az storage account keys list --account-name seeedkk \
 --resource-group ReButton
 ```
-カウントキーを入手すると、キーとアカウント名を環境変数として定義できるようになります。
+アカウントキーを入手すると、キーとアカウント名を環境変数として定義できるようになります。
 
 ```bash
 export AZURE_STORAGE_ACCOUNT=<account_name>
@@ -99,17 +99,16 @@ Package size: 641924
 
 ## Step 3: OTAプロセス
 
+**OTAは多くの電力を消費します。OTAが中断されることの無いよう、できるだけ新しい電池を使ってください。**
+
 1. ReButtonのLEDが白く光るまでボタンを押し続け、APモードに移行させます。
    (リマインダー: アクセスポイント名は`AZB-xxxxxxxxxxxx`で、このページのURLは`http://192.168.0.1`です。)
-
 1. ReButton - Homeを開き、`Firmware Update`をクリックします。
-
 1. 以下の情報はこのドキュメントで解説しています。
   - `Package URI` - Step 1.6にて
   - `Package CRC` - Step 2にて
   - `Package Size` - Step 2にて
-
 1. **ReButtonのボタンを押している状態で、**`Update`をクリックしてください。
-1. LEDが点滅を始めるまで、ボタンを押し続けます。ReButtonはファームウェアをダウンロードし、CRCを確認し、新しいファームウェアを書き込みます。**この工程は30秒ほどかかります。**
+1. LEDが点滅を始めるまで、ReButtonのボタンを押し続けます。ReButtonはファームウェアをダウンロードし、CRCを確認し、新しいファームウェアを書き込みます。**この工程は30秒ほどかかります。**
 1. LEDが白く光ったら、ボタンから手を離してください。APモードで新しいファームウェアが立ち上がった証拠です。
 1. APモードの状態で、ReButtonのWi-FiとAzure connectionのセットアップをしてください。
