@@ -158,6 +158,7 @@ APモードを終了して、ReButtonの電源をオフにします。
 
 ボタンを押すことで、D2Cメッセージをクラウドに送信できます。
 ReButton supportsは5種類のトリガーをサポートしており、既定のD2C message stringsは下記の通りです。
+
 |クリックの種類|LEDの色|actionNum|message|
 |:--|:--|:--|:--|
 |シングルクリック|ブルー|1|"Single click"|
