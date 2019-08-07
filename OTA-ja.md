@@ -1,14 +1,15 @@
-## ステップ1 : Azure Storageにファームウェアのバイナリファイルをアップロードしよう
+## Step 1: Azure Storageにファームウェアのバイナリファイルをアップロードしよう
 
 [Azure CLI](https://docs.microsoft.com/ja-jp/cli/azure/)を使ってAzure Storageにファームウェアのバイナリファイルをアップロードできます。
+Seeedが公開しているファームウェアを使う場合は、Step1と2の工程を省略できます。[Step3](#step-3-otaプロセス)に進んでください。
 
-### 1.1 : Azure CLIをインストールする
+### 1.1: Azure CLIをインストールする
 
 Azure CLIのインストール方法は[こちら](https://docs.microsoft.com/ja-jp/cli/azure/install-azure-cli)で説明しています。
 
 [Azure StorageでのAzure CLIの使用](https://docs.microsoft.com/ja-jp/azure/storage/common/storage-azure-cli) のページはこのプロセスを遂行するのに役に立ちます。
 
-### 1.2 : 新しいStorageアカウントを作成する
+### 1.2: 新しいStorageアカウントを作成する
 
 Azure Storageを使うために、Storageアカウントが必要です。コンピューターとサブスクリプションの接続を設定後、新しいAzure Storageアカウントを作成できます。
 
@@ -104,7 +105,7 @@ Package size: 641924
 1. ReButtonのLEDが白く光るまでボタンを押し続け、APモードに移行させます。
    (リマインダー: アクセスポイント名は`AZB-xxxxxxxxxxxx`で、このページのURLは`http://192.168.0.1`です。)
 1. ReButton - Homeを開き、`Firmware Update`をクリックします。
-1. 以下の情報はこのドキュメントで解説しています。
+1. 以下の情報はこのドキュメントで解説しています。Seeedが公開しているファームウェアの情報は[こちら](https://github.com/SeeedJP/ReButton/tree/master/firmware)から確認でできます。
   - `Package URI` - Step 1.6にて
   - `Package CRC` - Step 2にて
   - `Package Size` - Step 2にて
