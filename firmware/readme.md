@@ -6,3 +6,4 @@
 |2019/2/6|1.2|[ReButtonApp.1.2.bin](https://seeedkk.blob.core.windows.net/rebuttonfirm/ReButtonApp.1.2.bin)|0x0140|677684|
 |2019/4/25|1.3|[ReButtonApp.1.3.bin](https://seeedkk.blob.core.windows.net/rebuttonfirm/ReButtonApp.1.3.bin)|0x42e8|680612|
 |2019/5/23|1.4|[ReButtonApp.1.4.bin](https://seeedkk.blob.core.windows.net/rebuttonfirm/ReButtonApp.1.4.bin)|0xdaeb|680740|
+|2019/9/3|1.5|[ReButtonApp.1.5.bin](https://seeedkk.blob.core.windows.net/rebuttonfirm/ReButtonApp.1.5.bin)|0x8c26|680796|
