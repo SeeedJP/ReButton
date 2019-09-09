@@ -7,3 +7,9 @@
 |2019/4/25|1.3|[ReButtonApp.1.3.bin](https://seeedkk.blob.core.windows.net/rebuttonfirm/ReButtonApp.1.3.bin)|0x42e8|680612|
 |2019/5/23|1.4|[ReButtonApp.1.4.bin](https://seeedkk.blob.core.windows.net/rebuttonfirm/ReButtonApp.1.4.bin)|0xdaeb|680740|
 |2019/9/3|1.5|[ReButtonApp.1.5.bin](https://seeedkk.blob.core.windows.net/rebuttonfirm/ReButtonApp.1.5.bin)|0x8c26|680796|
+
+## IoT Plug and Play (public preview)
+
+|Date|Version|Package URI|Package CRC|Package Size|
+|:--|:--|:--|:--|:--|
+|2019/9/9|2.0|[ReButtonApp.2.0.public-preview.bin](https://seeedkk.blob.core.windows.net/rebuttonfirm/ReButtonApp.2.0.public-preview.bin)|0x6853|646616|
