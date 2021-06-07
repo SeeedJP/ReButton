@@ -10,7 +10,7 @@ ReButton is now available at [Seeed Bazaar](https://www.seeedstudio.com/ReButton
 
 **Build IoT solutions with IoT Button!**
 
-Seeed ReButton is a developer device for simple trigger actions, supporting multiple clicks and long press.  
+Seeed ReButton is a developer device for simple trigger actions, supporting multiple clicks and long press.
 In addition, you can connect Seeed Grove sensors to add more data points.
 
 1. When you push ReButton, it will power up and connect to Internet via pre-configured Wi-Fi.
@@ -58,19 +58,19 @@ Use AP Mode (Access Point Mode) to configure ReButton. **To avoid battery drain,
 
 **AP Mode consume power. Please use fresh battery to start using ReButton.**
 
-1. Hold button until RGB LED turns into White.  
+1. Hold button until RGB LED turns into White.
   RGB LED will start with Blue, Yellow, Cyan, then White. This will take about 10 seconds.
 
-1. Release button and confirm ReButton is in AP mode.  
+1. Release button and confirm ReButton is in AP mode.
   When ReButton successfully boots into AP Mode, RGB LED will blink in White.
 
-1. Connect to AP  
-  Look for Wi-Fi Access Point `AZB-xxxxxxxxxxxx` and connect to it from your PC.  
-  (`xxxxxxxxxxxx` is MAC address of your ReButton Wi-Fi.)  
+1. Connect to AP
+  Look for Wi-Fi Access Point `AZB-xxxxxxxxxxxx` and connect to it from your PC.
+  (`xxxxxxxxxxxx` is MAC address of your ReButton Wi-Fi.)
 
   ![4](img/4.png)
 
-1. Use a Web Browser to access ReButton - Home at `http://192.168.0.1`.  
+4. Use a Web Browser to access ReButton - Home at `http://192.168.0.1`.
 
   ![5](img/5.png)
 
@@ -82,10 +82,10 @@ Configure Wi-Fi settings to connect to Internet.
 
   ![6](img/6.png)
 
-1. Select your Wi-Fi Access Point from `Wi-Fi SSID` list.  
+2. Select your Wi-Fi Access Point from `Wi-Fi SSID` list.
   If you do not see your Access Point, refresh browser.
 1. Enter `Wi-Fi Passphrase` for your Wi-Fi AP.
-1. In case you would like to use specific Internet Time Server, enter FQDN to `Time Server`.  
+1. In case you would like to use specific Internet Time Server, enter FQDN to `Time Server`.
   _Default Internet Time Server is pool.ntp.org -> cn.pool.ntp.org -> europe.pool.ntp.org -> asia.pool.ntp.org -> oceania.pool.ntp.org ._
 
 1. Click `Save`.
@@ -115,7 +115,7 @@ In order to send Device to Cloud (D2C) message to Azure IoT Central, save device
 
 In order to connect ReButton to Azure IoT Central, the device template for ReButton needs to be defined in you Azure IoT Central Application. _Please refer [Azure IoT Central Document](https://docs.microsoft.com/en-us/azure/iot-central/howto-set-up-template) for more information._
 
-1. Create a device template for ReButton in Azure IoT Central.  
+1. Create a device template for ReButton in Azure IoT Central.
 
 |Display name|Name|Capability type|Semantic type|Schema|Unit|
 |:--|:--|:--|:--|:--|:--|
@@ -124,29 +124,36 @@ In order to connect ReButton to Azure IoT Central, the device template for ReBut
 |Action Number|actionNum|Telemetry|Event|String||
 
 - Battery Voltage
+
   ![10](img/10.png)
 
 - Message
+
   ![11](img/11.png)
 
 - Action Number
+
   ![12](img/12.png)
 
-1. Create a device in Azure IoT Central.
+2. Create a device in Azure IoT Central.
+
   ![18](img/18.png)
 
-1. Click `Connect` on Top Right corner of Azure IoT Central page.  
+3. Click `Connect` on Top Right corner of Azure IoT Central page.
+
   ![8](img/8.png)
 
-1. Copy 3 values.
+4. Copy 3 values.
     1. `Scope ID`
     1. `Device ID`
-    1. `Primary Key`  
-    ![9](img/9.png)
+    1. `Primary Key`
 
-1. Browse to ReButton - Home page then click `Azure IoT Central`.
+  ![9](img/9.png)
+
+5. Browse to ReButton - Home page then click `Azure IoT Central`.
 1. Enter `Scope ID`, `Device ID`, `SAS Key` from Azure IoT Central.
-1. Click `Save`.  
+1. Click `Save`.
+
   ![7](img/7.png)
 
 ## 4. Power off
@@ -158,7 +165,7 @@ Exit AP Mode and power off ReButton.
 # Other informations
 ## Device To Cloud (D2C) Messsage
 
-Button push will trigger D2C message to the cloud.  
+Button push will trigger D2C message to the cloud.
 ReButton supports 5 types of button triggers and default D2C message strings are following.
 
 |Clicks|RGB led|actionNum|message|
@@ -204,7 +211,7 @@ Examples of D2C message:
 
 # Firmware Development
 ## Development environment
-Please download and install [Arduino IDE](https://www.arduino.cc/en/Main/Software), not web editor. 
+Please download and install [Arduino IDE](https://www.arduino.cc/en/Main/Software), not web editor.
 
 On the preferenceof Arduino IDE, enter `https://www.seeed.co.jp/package_SeeedJP_index.json` to "Additional Boards Manager URLs".
 
@@ -221,7 +228,7 @@ The source code is:
 * [ReButton App](https://github.com/SeeedJP/ReButtonApp)
 
 ## Firmware OTA Update
-ReButton supports Firmware OTA.  
+ReButton supports Firmware OTA.
 Browse to `Firmware Update` page to see the current vesrion of firmware and update to new firmware.
 
 #### Current Firmware Version
@@ -234,7 +241,7 @@ For OTA firmware update process, please refer [this](OTA.md) page.
 
 ## SWD (Serial Wire Debug)
 
-ReButton has SWD pads for MCU development. **Please do this on your own risk,**  it is easy to make your ReButton brick.  
+ReButton has SWD pads for MCU development. **Please do this on your own risk,**  it is easy to make your ReButton brick.
 Following picture show the SWD signals of the PAD. You can connect this PADs to debug adapters by using [TC2030-CTX 6-Pin Cable](http://www.tag-connect.com/TC2030-CTX) or solder directly to the PADs.
 
 ![SWD PADs](img/SWD_PAD.png)
@@ -266,9 +273,8 @@ openocd -f /usr/local/share/openocd/scripts/interface/cmsis-dap.cfg -c 'transpor
 |Dimension|70mm\*70mm\*25mm|
 
 ## Design files
-* [Schematics](https://github.com/SeeedJP/ReButton/tree/master/electronics)  
-* [Housing](https://github.com/SeeedJP/ReButton/tree/master/mechanicals)  
+* [Schematics](https://github.com/SeeedJP/ReButton/tree/master/electronics)
+* [Housing](https://github.com/SeeedJP/ReButton/tree/master/mechanicals)
 
-![CC-BY-SA](https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png)  
+![CC-BY-SA](https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png)
 These files are licensed under [CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/deed.en).
-

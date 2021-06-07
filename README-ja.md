@@ -8,7 +8,7 @@ ReButtonは[Seeed Bazaar](https://www.seeedstudio.com/ReButton-p-2930.html)か�
 
 **IoTボタンでIoTソリューションを始めよう！**
 
-Seeed ReButtonはシンプルなトリガーアクションで動作する開発用デバイスで、マルチクリックやロングクリックもサポートしています。 
+Seeed ReButtonはシンプルなトリガーアクションで動作する開発用デバイスで、マルチクリックやロングクリックもサポートしています。
 Seeed Groveをつなぐことで、データポイントを増やすこともできます。
 
 1. ReButtonを押すと電源がONになり、設定済みのWi-Fi経由でインターネットに接続します。
@@ -60,15 +60,15 @@ ReButtonを設定するために、アクセスポイント(AP)モードで起�
   RGB LEDは青→黄→水色→白と順に変化します。白になるまで約10秒かかります。
 
 1. ボタンから指を離して、ReButtonがAPモードにはいることを確認します。
-APモードへのブートが成功すると、LEDは白く点滅します。 
+APモードへのブートが成功すると、LEDは白く点滅します。
 
 1. アクセスポイントへ接続します。
   パソコンから`AZB-xxxxxxxxxxxx`という名前のWi-Fiアクセスポイントに接続します。
-  (`xxxxxxxxxxxx` はReButtonのWi-FiのMACアドレスです。)  
+  (`xxxxxxxxxxxx` はReButtonのWi-FiのMACアドレスです。)
 
   ![4](img/4.png)
 
-1. Webブラウザーから`http://192.168.0.1`にアクセスし、ReButton - Homeを開きます。
+4. Webブラウザーから`http://192.168.0.1`にアクセスし、ReButton - Homeを開きます。
 
   ![5](img/5.png)
 
@@ -80,7 +80,7 @@ APモードへのブートが成功すると、LEDは白く点滅します。
 
   ![6](img/6.png)
 
-1. `Wi-Fi SSID`リストから、ReButtonにつなぎたいアクセスポイントのSSIDを選びます。 
+2. `Wi-Fi SSID`リストから、ReButtonにつなぎたいアクセスポイントのSSIDを選びます。
   SSIDが見えない場合は、Webブラウザーを更新してください。
 1. SSIDのパスワードを`Wi-Fi Passphrase`に入力します。
 1. インターネットタイムサーバーを使いたい場合は、`Time Server`にFQDNを入力します。
@@ -122,29 +122,36 @@ Azure IoT CentralにReButtonを接続するために、ReButtonのデバイス�
 |アクション番号|actionNum|Telemetry|Event|String||
 
 - バッテリー電圧
+
   ![10](img/ja/10.png)
 
 - メッセージ
+
   ![11](img/ja/11.png)
 
 - アクション番号
+
   ![12](img/ja/12.png)
 
-1. Azure IoT Central上でデバイスを作成します。
+2. Azure IoT Central上でデバイスを作成します。
+
   ![18](img/ja/18.png)
 
-1. Azure IoT Centralの右上にある`接続`をクリックします。
+3. Azure IoT Centralの右上にある`接続`をクリックします。
+
   ![8](img/ja/8.png)
 
-1. 次の3項目をコピーします。
+4. 次の3項目をコピーします。
     1. `スコープ ID`
     1. `デバイス ID`
-    1. `SAS主キー`  
-    ![9](img/ja/9.png)
+    1. `SAS主キー`
 
-1. ReButton-Homeを開き、`Azure IoT Central`をクリックします。
+  ![9](img/ja/9.png)
+
+5. ReButton-Homeを開き、`Azure IoT Central`をクリックします。
 1. Azure IoT Centralでコピーした3項目を、それぞれ`Scope ID`、`Device ID`、`SAS Key`に貼り付けます。
-1. `Save`をクリックします。  
+1. `Save`をクリックします。
+
   ![7](img/7.png)
 
 ## 4. 電源オフ
@@ -219,7 +226,7 @@ Arduino IDEの環境設定内の"追加のボードマネージャーのURL"に`
 * [ReButton App](https://github.com/SeeedJP/ReButtonApp)
 
 ## ファームウェアのOTAアップデート
-ReButtonはファームウェアのOTAアップデートをサポートしています。  
+ReButtonはファームウェアのOTAアップデートをサポートしています。
 `Firmware Update`から現在のファームウェアのバージョンを確認し、最新のバージョンに更新してください。
 
 #### 現在のファームウェアのバージョン
@@ -264,9 +271,8 @@ openocd -f /usr/local/share/openocd/scripts/interface/cmsis-dap.cfg -c 'transpor
 |サイズ|70mm\*70mm\*25mm|
 
 ## 設計ファイル
-* [回路図](https://github.com/SeeedJP/ReButton/tree/master/electronics)  
-* [筐体](https://github.com/SeeedJP/ReButton/tree/master/mechanicals)  
+* [回路図](https://github.com/SeeedJP/ReButton/tree/master/electronics)
+* [筐体](https://github.com/SeeedJP/ReButton/tree/master/mechanicals)
 
-![CC-BY-SA](https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png)  
+![CC-BY-SA](https://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-sa.png)
 これらのファイルは [CC-BY-SA](https://creativecommons.org/licenses/by-sa/4.0/deed.en)でライセンスされています。
-
