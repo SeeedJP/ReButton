@@ -117,22 +117,23 @@ In order to connect ReButton to Azure IoT Central, the device template for ReBut
 
 1. Create a device template for ReButton in Azure IoT Central.  
 
-|Type|Field Name|Values|
-|:--|:--|:--|
-|Telemetry|batteryVoltage| Battery Voltage Level (Volt)|
-|State|actionNum|1:Single click, 2:Double click, 3:Triple click, 10:Long press, 11:Super long press|
-|Event|message||
+|Display name|Name|Capability type|Semantic type|Schema|Unit|
+|:--|:--|:--|:--|:--|:--|
+|Battery Voltage|batteryVoltage|Telemetry|Voltage|Double|Volt|
+|Message|message|Telemetry|Event|String||
+|Action Number|actionNum|Telemetry|Event|String||
 
-- Telemetry  
+- Battery Voltage
   ![10](img/10.png)
 
-- State  
+- Message
   ![11](img/11.png)
 
-- Event  
+- Action Number
   ![12](img/12.png)
 
-2. Create a device in Azure IoT Central.
+1. Create a device in Azure IoT Central.
+  ![18](img/18.png)
 
 1. Click `Connect` on Top Right corner of Azure IoT Central page.  
   ![8](img/8.png)

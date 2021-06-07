@@ -115,23 +115,23 @@ Azure IoT CentralにReButtonを接続するために、ReButtonのデバイス�
 
 1. Azure IoT CentralでReButton用デバイステンプレートを作成します。
 
-|Type|Field Name|Values|
-|:--|:--|:--|
-|テレメトリ|batteryVoltage| バッテリー電圧(Volt)|
-|状態|actionNum|1:シングルクリック, 2:ダブルクリック, 3:トリプルクリック, 10:ロングクリック, 11:スーパーロングクリック|
-|イベント|message||
+|表示名|名前|機能の種類|セマンティックの種類|スキーマ|単位|
+|:--|:--|:--|:--|:--|:--|
+|バッテリー電圧|batteryVoltage|Telemetry|Voltage|Double|Volt|
+|メッセージ|message|Telemetry|Event|String||
+|アクション番号|actionNum|Telemetry|Event|String||
 
-
-- テレメトリ  
+- バッテリー電圧
   ![10](img/ja/10.png)
 
-- 状態  
+- メッセージ
   ![11](img/ja/11.png)
 
-- イベント 
+- アクション番号
   ![12](img/ja/12.png)
 
-2. Azure IoT Central上でデバイスを作成します。
+1. Azure IoT Central上でデバイスを作成します。
+  ![18](img/ja/18.png)
 
 1. Azure IoT Centralの右上にある`接続`をクリックします。
   ![8](img/ja/8.png)
@@ -142,7 +142,7 @@ Azure IoT CentralにReButtonを接続するために、ReButtonのデバイス�
     1. `SAS主キー`  
     ![9](img/ja/9.png)
 
-1. ReBUtton-Homeを開き、`Azure IoT Central`をクリックします。
+1. ReButton-Homeを開き、`Azure IoT Central`をクリックします。
 1. Azure IoT Centralでコピーした3項目を、それぞれ`Scope ID`、`Device ID`、`SAS Key`に貼り付けます。
 1. `Save`をクリックします。  
   ![7](img/7.png)
