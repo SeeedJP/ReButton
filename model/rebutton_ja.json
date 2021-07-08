@@ -1,0 +1,146 @@
+[
+  {
+    "@id": "dtmi:seeedkk:ReButton;1",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@id": "dtmi:seeedkk:ReButton:batteryVoltage;1",
+        "@type": [
+          "Telemetry",
+          "Voltage"
+        ],
+        "description": "バッテリーの電圧値を通知。",
+        "displayName": "バッテリー電圧",
+        "name": "batteryVoltage",
+        "schema": "double",
+        "unit": "volt"
+      },
+      {
+        "@id": "dtmi:seeedkk:ReButton:actionCount;1",
+        "@type": "Telemetry",
+        "description": "ボタンイベントの通知回数",
+        "displayName": "アクションカウント",
+        "name": "actionCount",
+        "schema": "integer"
+      },
+      {
+        "@id": "dtmi:seeedkk:ReButton:singleClick;1",
+        "@type": [
+          "Telemetry",
+          "Event"
+        ],
+        "description": "シングルクリックを通知",
+        "displayName": "シングルクリック",
+        "name": "singleClick",
+        "schema": "string"
+      },
+      {
+        "@id": "dtmi:seeedkk:ReButton:doubleClick;1",
+        "@type": [
+          "Telemetry",
+          "Event"
+        ],
+        "description": "ダブルクリックを通知",
+        "displayName": "ダブルクリック",
+        "name": "doubleClick",
+        "schema": "string"
+      },
+      {
+        "@id": "dtmi:seeedkk:ReButton:tripleClick;1",
+        "@type": [
+          "Telemetry",
+          "Event"
+        ],
+        "description": "トリプルクリックを通知",
+        "displayName": "トリプルクリック",
+        "name": "tripleClick",
+        "schema": "string"
+      },
+      {
+        "@id": "dtmi:seeedkk:ReButton:longPress;1",
+        "@type": [
+          "Telemetry",
+          "Event"
+        ],
+        "description": "ロングクリックを通知",
+        "displayName": "ロングクリック",
+        "name": "longPress",
+        "schema": "string"
+      },
+      {
+        "@id": "dtmi:seeedkk:ReButton:superLongPress;1",
+        "@type": [
+          "Telemetry",
+          "Event"
+        ],
+        "description": "スーパーロングクリックを通知",
+        "displayName": "スーパーロングクリック",
+        "name": "superLongPress",
+        "schema": "string"
+      },
+      {
+        "@id": "dtmi:seeedkk:ReButton:message;1",
+        "@type": [
+          "Telemetry",
+          "Event"
+        ],
+        "description": "ボタンイベントのメッセージを通知",
+        "displayName": "メッセージ",
+        "name": "message",
+        "schema": "string"
+      },
+      {
+        "@id": "dtmi:seeedkk:ReButton:actionNum;1",
+        "@type": [
+          "Telemetry",
+          "Event"
+        ],
+        "description": "ボタンイベントの種類を通知",
+        "displayName": "アクション番号",
+        "name": "actionNum",
+        "schema": "string"
+      },
+      {
+        "@id": "dtmi:seeedkk:ReButton:temperature;1",
+        "@type": [
+          "Telemetry",
+          "Temperature"
+        ],
+        "description": "環境センサ(SHT31,SHT35,BME280)が接続されている場合に通知される温度データ",
+        "displayName": "温度",
+        "name": "temperature",
+        "schema": "double",
+        "unit": "degreeCelsius"
+      },
+      {
+        "@id": "dtmi:seeedkk:ReButton:humidity;1",
+        "@type": [
+          "Telemetry",
+          "RelativeHumidity"
+        ],
+        "description": "環境センサ(SHT31,SHT35,BME280)が接続されている場合に通知される湿度データ",
+        "displayName": "湿度",
+        "name": "humidity",
+        "schema": "double",
+        "unit": "percent"
+      },
+      {
+        "@id": "dtmi:seeedkk:ReButton:pressure;1",
+        "@type": [
+          "Telemetry",
+          "Pressure"
+        ],
+        "description": "環境センサ(BME280)が接続されている場合に通知される気圧データ",
+        "displayName": "気圧",
+        "name": "pressure",
+        "schema": "double",
+        "unit": "pascal"
+      }
+    ],
+    "displayName": "ReButton",
+    "@context": [
+      "dtmi:iotcentral:context;2",
+      "dtmi:dtdl:context;2"
+    ]
+  }
+]
