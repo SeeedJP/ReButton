@@ -244,12 +244,18 @@ ReButtonはMCUの開発用に、底面にSWDパッドを搭載しています。
 
 ![SWD PADs](img/SWD_PAD.png)
 
-私たちはソフトウェア開発のために必要な情報と、手軽な価格のデバッグアダプターを準備を進めています。復旧に使える、デフォルトのファームウェアバイナリは[こちら](https://github.com/SeeedJP/ReButton/tree/master/firmware)からダウンロードできます。 バイナリファイルのターゲットは`STM32F412RG`です。デフォルトのファームウェアにはブートローダが含まれているため、書き込み先のアドレスは`0x0800 0000`です。(ブートローダー以外からバイナリを書き込む際のアドレスは`0x0800 C000`です。)
+私たちはソフトウェア開発のために必要な情報と、手軽な価格のデバッグアダプターの準備を進めています。復旧に使えるブートローダーが含まれているデフォルトのファームウェアバイナリ`ReButton.1.0_with_bootloader.bin`は[こちら](https://github.com/SeeedJP/ReButton/tree/master/firmware)からダウンロードできます。 バイナリファイルのターゲットは`STM32F412RG`です。書き込み先のアドレスは`0x0800 0000`です。
+
+1. ReButtonのSWDパッドにデバッグアダプターを接続
+2. 電池を取り付ける
+3. **ReButtonのボタンを押しながら**ダウンロードを実行
 
 例:
 ```
-openocd -f /usr/local/share/openocd/scripts/interface/cmsis-dap.cfg -c 'transport select swd' -f /usr/local/share/openocd/scripts/target/stm32f4x.cfg -c "program ReButton.1.0.bin verify reset 0x8000000"
+openocd -f /usr/local/share/openocd/scripts/interface/cmsis-dap.cfg -c 'transport select swd' -f /usr/local/share/openocd/scripts/target/stm32f4x.cfg -c "program ReButton.1.0_with_bootloader.bin verify reset exit 0x08000000"
 ```
+
+ファームウェア`ReButtonApp.1.x.bin`のみをアップデートする場合には、書き込み先のアドレスを`0x0800 C000`としてください。
 
 # 仕様
 
