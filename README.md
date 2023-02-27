@@ -246,12 +246,18 @@ Following picture show the SWD signals of the PAD. You can connect this PADs to 
 
 ![SWD PADs](img/SWD_PAD.png)
 
-We are preparing for providing software development informations and affordable debug adapter. For your recovering purpose, you can download ReButton default firmware binary from [here](https://github.com/SeeedJP/ReButton/tree/master/firmware). You need to flash this binary for target `STM32F412RG` and flash address `0x0800 0000` since this default firmware binary includes bootloader. ( When you flash a binary without bootloader, you should flash address `0x0800 C000`. )
+We are preparing for providing software development informations and affordable debug adapter. For your recovering purpose, you can download ReButton default firmware binary 'ReButton.1.0_with_bootloader.bin' from [here](https://github.com/SeeedJP/ReButton/tree/master/firmware). You need to flash this binary for target `STM32F412RG` and flash address `0x0800 0000` since this default firmware binary includes bootloader.
+
+1. Connect the debug adapter to ReButton's SWD pads.
+2. Install batteries.
+3. **While holding (physical) button of ReButton**, execute download.
 
 example:
 ```
-openocd -f /usr/local/share/openocd/scripts/interface/cmsis-dap.cfg -c 'transport select swd' -f /usr/local/share/openocd/scripts/target/stm32f4x.cfg -c "program ReButton.1.0.bin verify reset 0x8000000"
+openocd -f /usr/local/share/openocd/scripts/interface/cmsis-dap.cfg -c 'transport select swd' -f /usr/local/share/openocd/scripts/target/stm32f4x.cfg -c "program ReButton.1.0_with_bootloader.bin verify reset exit 0x08000000"
 ```
+
+When you flash a binary without bootloader (such as `ReButtonApp.1.x.bin`), you should flash address `0x0800 C000`.
 
 # Specification
 
