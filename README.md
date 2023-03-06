@@ -2,9 +2,9 @@
 
 ReButton is now available at [Seeed Bazaar](https://www.seeedstudio.com/ReButton-p-2930.html).
 
-[日本語版ドキュメント](https://seeedjp.github.io/ReButton/README-ja)
+[日本語版ドキュメント](README-ja.md)
 
-[HoL document in Simplified Chinese](https://seeedjp.github.io/ReButton/IoTinAction_Hands-on%20Lab_ReButton%20OTA%20CN.pdf)
+[HoL document in Simplified Chinese](IoTinAction_Hands-on%20Lab_ReButton%20OTA%20CN.pdf)
 
 # Overview
 

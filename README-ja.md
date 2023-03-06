@@ -1,6 +1,6 @@
 ![1](img/1.png)
 
-[This document in English.](https://seeedjp.github.io/ReButton/)
+[This document in English.](README.md)
 
 ReButtonは[Seeed Bazaar](https://www.seeedstudio.com/ReButton-p-2930.html)から購入できます。
 
