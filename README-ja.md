@@ -1,8 +1,29 @@
 ![1](img/1.png)
 
-[This document in English.](https://seeedjp.github.io/ReButton/)
+[This document in English.](README.md)
 
 ReButtonは[Seeed Bazaar](https://www.seeedstudio.com/ReButton-p-2930.html)から購入できます。
+
+[!WARNING]
+**注意 (2023年3月7日追記)**
+
+2023年2月15日～2024年2月15日に実施予定のAzure IoT Hub/Azure IoT Hub Device Provisioning Serviceのルート証明書の移行[1]に伴い、ReButtonのファームウェアを**v1.12**以降へアップデートする必要があります[2]。
+
+尚、ファームウェアが**v1.0～v1.11**の場合には**OTAが失敗する**ため、[SWDによるファームウェアアップデート](#swd-serial-wire-debug)を実施してください。
+
+##### なにが行われるのか？
+2023年2月15日～2024年2月15日に、Azure IoT Hub/Azure IoT Hub Device Provisioning Serviceのサーバ証明書のルート証明書が順次変更されます。
+
+* Azure IoT Hub: 2023年2月15日～2023年10月15日
+* Azure IoT Hub Device Provisioning Service: 2024年1月15日～2024年2月15日
+
+##### ファームウェアをアップデートしないとどうなるのか？
+2023年2月15日以降、ReButtonがAzure IoT Hub/IoT Centralに接続できなくなる可能性があります。
+
+---
+1. 詳しくは「[Azure IoT TLS: Critical changes are almost here! (…and why you should care)](https://techcommunity.microsoft.com/t5/internet-of-things-blog/azure-iot-tls-critical-changes-are-almost-here-and-why-you/ba-p/2393169)」を参照のこと
+2. 工場出荷時のファームウェアは"v1.0"です
+[!ENDWARNING]
 
 # 概要
 

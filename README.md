@@ -2,9 +2,30 @@
 
 ReButton is now available at [Seeed Bazaar](https://www.seeedstudio.com/ReButton-p-2930.html).
 
-[日本語版ドキュメント](https://seeedjp.github.io/ReButton/README-ja)
+[日本語版ドキュメント](README-ja.md)
 
-[HoL document in Simplified Chinese](https://seeedjp.github.io/ReButton/IoTinAction_Hands-on%20Lab_ReButton%20OTA%20CN.pdf)
+[HoL document in Simplified Chinese](IoTinAction_Hands-on%20Lab_ReButton%20OTA%20CN.pdf)
+
+[!WARNING]
+**Warning (Updated March 7, 2023)**
+
+Due to the migration of the root certificate for Azure IoT Hub/Azure IoT Hub Device Provisioning Service planned from February 15, 2023 to February 15, 2024 [1], it is necessary to update ReButton's firmware to **v1.12 or later** [2].
+
+Note that **OTA updates will fail** for firmware v1.0 to 1.11, so [firmware updates via SWD](#swd-serial-wire-debug) must be performed.
+
+##### What is happening?
+Between February 15, 2023 and February 15, 2024, the root certificate of the server certificate for Azure IoT Hub/Azure IoT Hub Device Provisioning Service will be gradually changed.
+
+* Azure IoT Hub: February 15, 2023 to October 15, 2023
+* Azure IoT Hub Device Provisioning Service: January 15, 2024 to February 15, 2024
+
+##### What happens if I don't update the firmware?
+After February 15, 2023, there is a possibility that ReButton will no longer be able to connect to Azure IoT Hub/IoT Central.
+
+---
+1. See "[Azure IoT TLS: Critical changes are almost here! (…and why you should care)](https://techcommunity.microsoft.com/t5/internet-of-things-blog/azure-iot-tls-critical-changes-are-almost-here-and-why-you/ba-p/2393169)" for more details.
+2. Factory default firmware is "v1.0".
+[!ENDWARNING]
 
 # Overview
 
